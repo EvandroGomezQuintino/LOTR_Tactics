@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6971462736465601598}
+  - {fileID: 5806434296934018618}
   - {fileID: 6971462736249623701}
   - {fileID: 6971462736013829076}
   - {fileID: 6971462736348498229}
@@ -118,7 +119,7 @@ GameObject:
   - component: {fileID: 6971462735876340893}
   - component: {fileID: 6971462735876340892}
   m_Layer: 0
-  m_Name: Tile_Movement (4)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +138,7 @@ Transform:
   m_Children:
   - {fileID: 6971462737208456778}
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462735876340893
 SpriteRenderer:
@@ -215,7 +216,7 @@ GameObject:
   - component: {fileID: 6971462736013829078}
   - component: {fileID: 6971462736013829077}
   m_Layer: 0
-  m_Name: Tile_Movement (1)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +235,7 @@ Transform:
   m_Children:
   - {fileID: 6971462737308506052}
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736013829078
 SpriteRenderer:
@@ -312,7 +313,7 @@ GameObject:
   - component: {fileID: 6971462736137760433}
   - component: {fileID: 6971462736137760432}
   m_Layer: 0
-  m_Name: Tile_Movement (6)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736137760433
 SpriteRenderer:
@@ -408,7 +409,7 @@ GameObject:
   - component: {fileID: 6971462736147278474}
   - component: {fileID: 6971462736147278473}
   m_Layer: 0
-  m_Name: Tile_Movement (7)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +428,7 @@ Transform:
   m_Children:
   - {fileID: 6971462737924458812}
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736147278474
 SpriteRenderer:
@@ -522,7 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736249623702
 SpriteRenderer:
@@ -587,7 +588,7 @@ GameObject:
   - component: {fileID: 6971462736348498231}
   - component: {fileID: 6971462736348498230}
   m_Layer: 0
-  m_Name: Tile_Movement (3)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736348498231
 SpriteRenderer:
@@ -683,7 +684,7 @@ GameObject:
   - component: {fileID: 6971462736465535381}
   - component: {fileID: 6971462736465535380}
   m_Layer: 0
-  m_Name: Tile_Movement (9)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,7 +702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736465535381
 SpriteRenderer:
@@ -809,7 +810,7 @@ GameObject:
   - component: {fileID: 6971462736564974029}
   - component: {fileID: 6971462736564974028}
   m_Layer: 0
-  m_Name: Tile_Movement (12)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462736564974029
 SpriteRenderer:
@@ -905,7 +906,7 @@ GameObject:
   - component: {fileID: 6971462737023523847}
   - component: {fileID: 6971462737023523846}
   m_Layer: 0
-  m_Name: Tile_Movement (11)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,7 +1002,7 @@ GameObject:
   - component: {fileID: 6971462737104634944}
   - component: {fileID: 6971462737104634975}
   m_Layer: 0
-  m_Name: Tile_Movement (10)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,7 +1021,7 @@ Transform:
   m_Children:
   - {fileID: 6971462737023523845}
   m_Father: {fileID: 6971462736825598567}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6971462737104634944
 SpriteRenderer:
@@ -1098,7 +1099,7 @@ GameObject:
   - component: {fileID: 6971462737208456780}
   - component: {fileID: 6971462737208456779}
   m_Layer: 0
-  m_Name: Tile_Movement (5)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,7 +1195,7 @@ GameObject:
   - component: {fileID: 6971462737308506054}
   - component: {fileID: 6971462737308506053}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,7 +1291,7 @@ GameObject:
   - component: {fileID: 6971462737924458814}
   - component: {fileID: 6971462737924458813}
   m_Layer: 0
-  m_Name: Tile_Movement (8)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1374,3 +1375,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &7772485292152534232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5806434296934018618}
+  m_Layer: 0
+  m_Name: multipleTag (1)
+  m_TagString: Heroes
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5806434296934018618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772485292152534232}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6971462736825598567}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

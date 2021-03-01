@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6576048787878005063}
+  - {fileID: 7943674330994347252}
   - {fileID: 1553950488720495386}
   - {fileID: 4732260497590497860}
   - {fileID: 2301259745436075072}
@@ -114,7 +115,7 @@ GameObject:
   - component: {fileID: 7220125592028820691}
   - component: {fileID: 8491203478283643653}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +211,7 @@ GameObject:
   - component: {fileID: 5664285450404333297}
   - component: {fileID: 2382126165263933443}
   m_Layer: 0
-  m_Name: Tile_Movement (4)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +230,7 @@ Transform:
   m_Children:
   - {fileID: 4934807110447938591}
   m_Father: {fileID: 8858287059909370162}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5664285450404333297
 SpriteRenderer:
@@ -307,7 +308,7 @@ GameObject:
   - component: {fileID: 7480258725710048386}
   - component: {fileID: 6595435071420725954}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +404,7 @@ GameObject:
   - component: {fileID: 3958331182434825346}
   - component: {fileID: 7120341552163958132}
   m_Layer: 0
-  m_Name: Tile_Movement (1)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,7 +423,7 @@ Transform:
   m_Children:
   - {fileID: 1131890977429782615}
   m_Father: {fileID: 8858287059909370162}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3958331182434825346
 SpriteRenderer:
@@ -488,6 +489,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3616926080596658871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7943674330994347252}
+  m_Layer: 0
+  m_Name: multipleTag (1)
+  m_TagString: Mordor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7943674330994347252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616926080596658871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5, y: 4.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8858287059909370162}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3725497039366764734
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +531,7 @@ GameObject:
   - component: {fileID: 4079410710398257544}
   - component: {fileID: 5573084701496304766}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +550,7 @@ Transform:
   m_Children:
   - {fileID: 6760211927177882942}
   m_Father: {fileID: 8858287059909370162}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4079410710398257544
 SpriteRenderer:
@@ -597,7 +628,7 @@ GameObject:
   - component: {fileID: 9071304320753763831}
   - component: {fileID: 6681632446146908163}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,7 +725,7 @@ GameObject:
   - component: {fileID: 1122338497896563013}
   - component: {fileID: 4911892592187131447}
   m_Layer: 0
-  m_Name: Tile_Movement (3)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,7 +744,7 @@ Transform:
   m_Children:
   - {fileID: 7190057477170547486}
   m_Father: {fileID: 8858287059909370162}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1122338497896563013
 SpriteRenderer:
@@ -838,7 +869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8858287059909370162}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5314935550235294539
 SpriteRenderer:
@@ -903,7 +934,7 @@ GameObject:
   - component: {fileID: 2092412477603258312}
   - component: {fileID: 4351722642901256879}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,7 +1030,7 @@ GameObject:
   - component: {fileID: 8988540961360820874}
   - component: {fileID: 2893173247240118044}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1096,7 +1127,7 @@ GameObject:
   - component: {fileID: 8482782960794464327}
   - component: {fileID: 1852558945418807634}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1193,7 +1224,7 @@ GameObject:
   - component: {fileID: 349218163674455481}
   - component: {fileID: 553231794899375796}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,7 +1321,7 @@ GameObject:
   - component: {fileID: 7506642049641483138}
   - component: {fileID: 8719144088124120115}
   m_Layer: 0
-  m_Name: Tile_Movement (2)
+  m_Name: Tile_Movement
   m_TagString: Tile_Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

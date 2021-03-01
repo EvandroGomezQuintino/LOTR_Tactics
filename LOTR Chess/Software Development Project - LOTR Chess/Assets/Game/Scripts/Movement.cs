@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     public void Start()
     {
         game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-        actions = 1;
+        actions = 0;
 
 
 
@@ -37,22 +37,7 @@ public class Movement : MonoBehaviour
         int objXposition = game.xPos(objSelected.transform);
         int objYposition = game.yPos(objSelected.transform);
 
-        // Checking if two actions were used
-        if (actions == 2)
-        {
-            if(game.player == Players.PLAYER1)
-            {
-                game.turn = BattleSystem.HEROES;
-                game.heroesTurn();
-                actions = 0;
-            }
-            else if(game.player == Players.PLAYER2)
-            {
-                game.turn = BattleSystem.NAZGUL;
-                game.nazgulTurn();
-                actions = 0;
-            }
-        }
+
 
        if (previousPiece != null)
         {
@@ -196,13 +181,28 @@ public class Movement : MonoBehaviour
 
 
 
-
-
-
             actions++;
+            Debug.LogError("ACTIONS:" + actions);
+
 
         }
 
+        // Checking if two actions were used
+        if (actions == 2)
+        {
+            if (game.player == Players.PLAYER1)
+            {
+                game.turn = BattleSystem.HEROES;
+                game.heroesTurn();
+                actions = 0;
+            }
+            else if (game.player == Players.PLAYER2)
+            {
+                game.turn = BattleSystem.NAZGUL;
+                game.nazgulTurn();
+                actions = 0;
+            }
+        }
     }
 
     //Checking if Position is valid (inside the board)
@@ -226,8 +226,8 @@ public class Movement : MonoBehaviour
         int y = yPos;
 
         //testing
-        Debug.LogError("POSITION X:" + x + " Y: " + y);
-        Debug.LogError("Empty Poistion:"+ game.positions[x, y]);
+        //Debug.LogError("POSITION X:" + x + " Y: " + y);
+        //Debug.LogError("Empty Poistion:"+ game.positions[x, y]);
 
         if (game.positions[x,y] == null)
         {

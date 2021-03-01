@@ -17,7 +17,9 @@ public class GameController : MonoBehaviour
     // DONE: Check turns
     // DONE: Fix TileSelected respawn
     // DONE: Destroy TileMovement gameObjects
-    // TODO: 
+    // TODO: Need to differentiate the pieces for each player, so Player 1 cant choose player 2 pieces
+    // TODO: After that, I can use start the attack movement.
+
 
 
 
@@ -77,8 +79,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && turn == BattleSystem.NAZGUL && player == Players.PLAYER1)
         {
-            // TODO:    Add code below to movement function
-            //Tracing mouse position and returning GameObject name
+            //Tracing mouse position and returning GameObject
             Ray ray;
             RaycastHit hitdata;
 
@@ -87,28 +88,48 @@ public class GameController : MonoBehaviour
             {
 
                 objSelected = hitdata.transform.gameObject;
-                Debug.LogError(objSelected.ToString());
-                Debug.LogError("PLAYER 1 - NAZGUL");
-                _movement.clickObj(objSelected);
-                
+
+                //Checking if Piece selected belongs to player
+                if(objSelected.tag == "Tile_Movement")
+                {
+                    Debug.LogError(objSelected.ToString());
+                    Debug.LogError("PLAYER 1 - NAZGUL");
+                    _movement.clickObj(objSelected);
+                }
+                else if (objSelected.transform.GetChild(1).tag=="Mordor")
+                {
+                    Debug.LogError(objSelected.ToString());
+                    Debug.LogError("PLAYER 1 - NAZGUL");
+                    _movement.clickObj(objSelected);
+                }
+
             }
         }
         else if (Input.GetMouseButtonDown(0) && turn == BattleSystem.HEROES && player == Players.PLAYER2)
         {
-            // TODO:    Add code below to movement function
-            // Tracing mouse position and returning GameObject name
+            // Tracing mouse position and returning GameObject 
             Ray ray;
             RaycastHit hitdata;
 
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hitdata, 20))
             {
-
                 objSelected = hitdata.transform.gameObject;
-                Debug.LogError(objSelected.ToString());
-                Debug.LogError("PLAYER 2 - HEROES");
-                
-                _movement.clickObj(objSelected);
+
+                //Checking if Piece selected belongs to player
+                if (objSelected.tag == "Tile_Movement")
+                {
+                    Debug.LogError(objSelected.ToString());
+                    Debug.LogError("PLAYER 1 - HEROES");
+                    _movement.clickObj(objSelected);
+                }
+                else if (objSelected.transform.GetChild(1).tag == "Heroes")
+                {
+                    Debug.LogError(objSelected.ToString());
+                    Debug.LogError("PLAYER 1 - HEROES");
+                    _movement.clickObj(objSelected);
+                }
+
             }
         }
 
