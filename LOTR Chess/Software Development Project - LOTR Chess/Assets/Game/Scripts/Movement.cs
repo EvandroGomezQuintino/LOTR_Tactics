@@ -99,41 +99,47 @@ public class Movement : MonoBehaviour
 
                             foreach (Transform child2 in child.transform)
                             {
-                                if (validMovement(child2))
+                                if(child2 != null)
                                 {
-                                    childXPosition = game.xPos(child2);
-                                    childYPosition = game.yPos(child2);
-
-                                    //Checking second level of children
-                                    if (emptySpace(childXPosition, childYPosition))
+                                    if (validMovement(child2))
                                     {
-                                        child2.gameObject.SetActive(true);
+                                        childXPosition = game.xPos(child2);
+                                        childYPosition = game.yPos(child2);
 
-                                        //Checking third level of children
-                                        foreach (Transform child3 in child2.transform)
+                                        //Checking second level of children
+                                        if (emptySpace(childXPosition, childYPosition))
                                         {
-                                            if (validMovement(child3))
+                                            child2.gameObject.SetActive(true);
+
+                                            //Checking third level of children
+                                            foreach (Transform child3 in child2.transform)
                                             {
-                                                childXPosition = game.xPos(child3);
-                                                childYPosition = game.yPos(child3);
-
-                                                //Testing                                                    
-                                                //Debug.LogError("Position X" + childXPosition + "Y:" + childYPosition);
-
-
-                                                if (emptySpace(childXPosition, childYPosition))
+                                                if (child3 != null)
                                                 {
-                                                    child3.gameObject.SetActive(true);
-                                                }
-                                                else
-                                                {
-                                                    child3.gameObject.SetActive(false);
-                                                }
+                                                    if (validMovement(child3))
+                                                    {
+                                                        childXPosition = game.xPos(child3);
+                                                        childYPosition = game.yPos(child3);
 
-                                            }
-                                            else
-                                            {
-                                                child3.gameObject.SetActive(false);
+                                                        //Testing                                                    
+                                                        //Debug.LogError("Position X" + childXPosition + "Y:" + childYPosition);
+
+
+                                                        if (emptySpace(childXPosition, childYPosition))
+                                                        {
+                                                            child3.gameObject.SetActive(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            child3.gameObject.SetActive(false);
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        child3.gameObject.SetActive(false);
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -195,8 +201,6 @@ public class Movement : MonoBehaviour
 
 
         }
-
-
 
 
 

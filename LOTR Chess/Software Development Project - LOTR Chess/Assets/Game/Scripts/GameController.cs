@@ -92,13 +92,13 @@ public class GameController : MonoBehaviour
                 //Checking if Piece selected belongs to player
                 if(objSelected.tag == "Tile_Movement")
                 {
-                    Debug.LogError(objSelected.ToString());
+                    //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - NAZGUL");
                     _movement.clickObj(objSelected);
                 }
                 else if (objSelected.transform.GetChild(1).tag=="Mordor")
                 {
-                    Debug.LogError(objSelected.ToString());
+                    //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - NAZGUL");
                     _movement.clickObj(objSelected);
                 }
@@ -119,13 +119,13 @@ public class GameController : MonoBehaviour
                 //Checking if Piece selected belongs to player
                 if (objSelected.tag == "Tile_Movement")
                 {
-                    Debug.LogError(objSelected.ToString());
+                    //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - HEROES");
                     _movement.clickObj(objSelected);
                 }
                 else if (objSelected.transform.GetChild(1).tag == "Heroes")
                 {
-                    Debug.LogError(objSelected.ToString());
+                    //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - HEROES");
                     _movement.clickObj(objSelected);
                 }
