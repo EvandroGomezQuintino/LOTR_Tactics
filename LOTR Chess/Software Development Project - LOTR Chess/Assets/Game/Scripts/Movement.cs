@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private int actions;
+    private int actions = 0;
     public GameController game;
     //public PathMoveSet moveSet;
 
     //Tiles
-    public GameObject tileSelected;
-    public GameObject tileMovement;
-    //public GameObject tileCombat;
+    //public GameObject tileSelected;
+    //public GameObject tileMovement;
+    public GameObject tileCombat;
 
     //Selection
     private GameObject objSelected;
@@ -22,8 +22,7 @@ public class Movement : MonoBehaviour
     public void Start()
     {
         game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-        actions = 0;
-
+     
 
 
 
@@ -34,12 +33,22 @@ public class Movement : MonoBehaviour
     public void clickObj(GameObject obj)
     {
         objSelected = obj;
+        //Converting world position into game position
         int objXposition = game.xPos(objSelected.transform);
         int objYposition = game.yPos(objSelected.transform);
 
+        // Getting combat tiles and destroying them 
+        GameObject[] combatTile = GameObject.FindGameObjectsWithTag("Tile_Combat");
 
+        if(combatTile != null)
+        {
+           foreach(GameObject tile in combatTile)
+            {
+                Destroy(tile);
+            }
+        }
 
-       if (previousPiece != null)
+        if (previousPiece != null)
         {
             foreach(Transform child in previousPiece.transform)
             {
@@ -51,7 +60,7 @@ public class Movement : MonoBehaviour
                         child2.gameObject.SetActive(false);
                         foreach (Transform child3 in child2.transform)
                         {
-                            child2.gameObject.SetActive(false);
+                            child3.gameObject.SetActive(false);
                         }
                     }
                 }
@@ -187,6 +196,12 @@ public class Movement : MonoBehaviour
 
         }
 
+
+
+
+
+
+
         // Checking if two actions were used
         if (actions == 2)
         {
@@ -235,11 +250,28 @@ public class Movement : MonoBehaviour
         }
         else
         {
+
+            combatTile(x, y);
             return false;
         }
     }
 
 
+    public void combatTile(int x, int y)
+    {
 
+        string tag_ObjSelected = objSelected.transform.GetChild(1).tag;
+        string tag_enemy = game.positions[x, y].gameObject.transform.GetChild(1).tag;
+        float combatXPos = game.positions[x, y].gameObject.transform.position.x;
+        float combatYPos = game.positions[x, y].gameObject.transform.position.y;
+
+        if (tag_ObjSelected != tag_enemy)
+        {
+            Instantiate(tileCombat, new Vector2(combatXPos, combatYPos), Quaternion.identity);
+        }
+       
+
+
+    }
 
 }
