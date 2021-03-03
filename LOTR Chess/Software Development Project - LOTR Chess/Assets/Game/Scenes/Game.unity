@@ -237,8 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 655440800}
-  tileSelected: {fileID: 3164906998954007906, guid: 7b4e58dc1fe220840aad896fcb7c2926, type: 3}
-  tileMovement: {fileID: 4136444753853545466, guid: edebf02b6c3e3744b94f778f10096acd, type: 3}
+  tileCombat: {fileID: 2685455170600492810, guid: 45cd858ada552d142bddf89651467599, type: 3}
 --- !u!4 &632090065
 Transform:
   m_ObjectHideFlags: 0
