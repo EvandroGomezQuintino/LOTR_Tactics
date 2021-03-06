@@ -293,9 +293,13 @@ public class Movement : MonoBehaviour
         {
             return true;
         }
+        //Avoiding piece to move to The Eye tile
+        else if(game.positions[x, y] == GameObject.FindGameObjectWithTag("Eye"))
+        {
+            return false;
+        }
         else
         {
-
             combatTile(x, y);
             return false;
         }

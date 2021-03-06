@@ -19,11 +19,10 @@ public class GameController : MonoBehaviour
     // DONE: Destroy TileMovement gameObjects
     // DONE: Need to differentiate the pieces for each player, so Player 1 cant choose player 2 pieces
     // DONE: Implemented combat system
-    // TODO: Add the Montain Doom position
-    // TODO: Add the Eye element
-    // TODO: Add the winning conditions for both players
-    // TODO: Change movement set for the Heroes (specially hobbits)
-    // TODO: Add sprites for each piece
+    // DONE: Add the Montain Doom position
+    // DONE: Add the Eye element
+    // DONE: Add the winning conditions for both players
+    // DONE: Add sprites for each piece
     // TODO: Prepare email to Joe Roe about my project.The idea and which stage I am
     // TODO: Add Multiplayer system
     // TODO: Clean up code
@@ -33,7 +32,7 @@ public class GameController : MonoBehaviour
     // TODO: Add Audio
     // TODO: Add Music
     // TODO: Start Game Documentation
-
+    // TODO: Review movement set for the pieces (specially hobbits)
 
 
 
@@ -55,6 +54,7 @@ public class GameController : MonoBehaviour
     public GameObject witchKing, nazgul_1, nazgul_2, nazgul_3, nazgul_4, nazgul_5, nazgul_6, nazgul_7, nazgul_8;
     //Other elements
     public GameObject mountDoom;
+    public GameObject theEye;
 
     //Mapping Boardgame positions X and Y
     private Dictionary<float, int> xBoard;
@@ -161,8 +161,12 @@ public class GameController : MonoBehaviour
         positions[xPos(nazgul_6.transform), yPos(nazgul_6.transform)] = Instantiate(nazgul_6);
         positions[xPos(nazgul_7.transform), yPos(nazgul_7.transform)] = Instantiate(nazgul_7);
         positions[xPos(nazgul_8.transform), yPos(nazgul_8.transform)] = Instantiate(nazgul_8);
-        //Adding MountDoom
+        //Adding MountDoom and the Eye
         positions[xPos(mountDoom.transform), yPos(mountDoom.transform)] = Instantiate(mountDoom);
+        positions[7,13] = Instantiate(theEye);
+
+
+
 
 
         //TESTING x,y POSITIONS

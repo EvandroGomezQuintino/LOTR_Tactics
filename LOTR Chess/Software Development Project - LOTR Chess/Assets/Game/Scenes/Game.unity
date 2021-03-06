@@ -328,6 +328,7 @@ MonoBehaviour:
   nazgul_7: {fileID: 4636758598844504913, guid: 0275984cbda61f64cab995615fdfb21d, type: 3}
   nazgul_8: {fileID: 8618292448840953687, guid: e0df9a187627f854e80b8cfe7dd3bc9d, type: 3}
   mountDoom: {fileID: 2975344220927149141, guid: 9dbca2bb5c3b8d84f9198fd5bd10fd46, type: 3}
+  theEye: {fileID: 3541761813153056469, guid: 149b7a497b55d584695a42fc57f5d8b7, type: 3}
   objSelected: {fileID: 0}
 --- !u!1 &1603192042
 GameObject:

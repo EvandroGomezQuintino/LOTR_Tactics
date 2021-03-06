@@ -24,6 +24,7 @@ TagManager:
   - Mordor
   - Tile_Combat
   - MountDoom
+  - Eye
   layers:
   - Default
   - TransparentFX
