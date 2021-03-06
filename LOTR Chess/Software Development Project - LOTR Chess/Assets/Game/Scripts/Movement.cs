@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -36,6 +37,10 @@ public class Movement : MonoBehaviour
         //Converting world position into game position
         int objXposition = game.xPos(objSelected.transform);
         int objYposition = game.yPos(objSelected.transform);
+        Debug.LogError("X "+objXposition);
+        Debug.LogError("Y "+objYposition);
+
+
 
         // Getting combat tiles and destroying them 
         GameObject[] combatTile = GameObject.FindGameObjectsWithTag("Tile_Combat");
@@ -99,47 +104,43 @@ public class Movement : MonoBehaviour
 
                             foreach (Transform child2 in child.transform)
                             {
-                                if(child2 != null)
+                                
+                                if (validMovement(child2))
                                 {
-                                    if (validMovement(child2))
+                                    childXPosition = game.xPos(child2);
+                                    childYPosition = game.yPos(child2);
+
+                                    //Checking second level of children
+                                    if (emptySpace(childXPosition, childYPosition))
                                     {
-                                        childXPosition = game.xPos(child2);
-                                        childYPosition = game.yPos(child2);
+                                        child2.gameObject.SetActive(true);
 
-                                        //Checking second level of children
-                                        if (emptySpace(childXPosition, childYPosition))
+                                        //Checking third level of children
+                                        foreach (Transform child3 in child2.transform)
                                         {
-                                            child2.gameObject.SetActive(true);
-
-                                            //Checking third level of children
-                                            foreach (Transform child3 in child2.transform)
+  
+                                            if (validMovement(child3))
                                             {
-                                                if (child3 != null)
+                                                childXPosition = game.xPos(child3);
+                                                childYPosition = game.yPos(child3);
+
+                                                //Testing                                                    
+                                                //Debug.LogError("Position X" + childXPosition + "Y:" + childYPosition);
+
+
+                                                if (emptySpace(childXPosition, childYPosition))
                                                 {
-                                                    if (validMovement(child3))
-                                                    {
-                                                        childXPosition = game.xPos(child3);
-                                                        childYPosition = game.yPos(child3);
-
-                                                        //Testing                                                    
-                                                        //Debug.LogError("Position X" + childXPosition + "Y:" + childYPosition);
-
-
-                                                        if (emptySpace(childXPosition, childYPosition))
-                                                        {
-                                                            child3.gameObject.SetActive(true);
-                                                        }
-                                                        else
-                                                        {
-                                                            child3.gameObject.SetActive(false);
-                                                        }
-
-                                                    }
-                                                    else
-                                                    {
-                                                        child3.gameObject.SetActive(false);
-                                                    }
+                                                    child3.gameObject.SetActive(true);
                                                 }
+                                                else
+                                                {
+                                                    child3.gameObject.SetActive(false);
+                                                }
+
+                                            }
+                                            else
+                                            {
+                                                child3.gameObject.SetActive(false);
                                             }
                                         }
                                     }
@@ -167,7 +168,7 @@ public class Movement : MonoBehaviour
             }
 
         //Selecting Tiles for movement
-        if (objSelected.tag == "Tile_Movement" && previousPiece != null)
+        else if (objSelected.tag == "Tile_Movement" && previousPiece != null)
             {
 
             int xPrevPosition = game.xPos(previousPiece.transform);
@@ -194,7 +195,13 @@ public class Movement : MonoBehaviour
             game.positions[xPrevPosition, yPrevPosition] = null;
             game.positions[objXposition, objYposition] = previousPiece;
 
+            // If Frodo reaches the MountDoom
+            if (previousPiece.transform.GetChild(0).tag == "frodo" && objXposition == 9 && objYposition == 10)
+            {
+                // Loading Scene showing that Heroes Won
+                SceneManager.LoadScene("HeroesWon", LoadSceneMode.Single);
 
+            }
 
             actions++;
             Debug.LogError("ACTIONS:" + actions);
@@ -202,11 +209,45 @@ public class Movement : MonoBehaviour
 
         }
 
+        // Selecting tile where enemy is present
+        else if(objSelected.tag == "Tile_Combat")
+        {
+            // Board position for the Tile_Combat selected
+            int BoardxPos = game.xPos(objSelected.transform);
+            int BoardyPos = game.yPos(objSelected.transform);
+
+            // Original board position for the piece in movement
+            int PieceOriginalXpos = game.xPos(previousPiece.transform);
+            int PieceOriginalypos = game.yPos(previousPiece.transform);
+
+            //Getting enemy piece
+            GameObject enemy = game.positions[BoardxPos, BoardyPos];
+            
+            //Moving piece
+            previousPiece.transform.position = new Vector2(objSelected.transform.position.x, objSelected.transform.position.y);
+            
+            //Updating board array with movement
+            game.positions[BoardxPos, BoardyPos] = previousPiece;
+            game.positions[PieceOriginalXpos, PieceOriginalypos] = null;
+
+            //Fininishing combat action
+            if(enemy.transform.GetChild(0).tag !="frodo")
+            {
+                Destroy(enemy);
+            }
+            // Frodo dying results in Mordors victory
+            else
+            {
+                SceneManager.LoadScene("NazgulWon", LoadSceneMode.Single);
+            }
+
+            actions++;
+        }
 
 
 
 
-        // Checking if two actions were used
+        // Checking if two actions were used per player
         if (actions == 2)
         {
             if (game.player == Players.PLAYER1)
@@ -248,7 +289,7 @@ public class Movement : MonoBehaviour
         //Debug.LogError("POSITION X:" + x + " Y: " + y);
         //Debug.LogError("Empty Poistion:"+ game.positions[x, y]);
 
-        if (game.positions[x,y] == null)
+        if (game.positions[x,y] == null || game.positions[x,y] == GameObject.FindGameObjectWithTag("MountDoom"))
         {
             return true;
         }
@@ -266,11 +307,14 @@ public class Movement : MonoBehaviour
 
         string tag_ObjSelected = objSelected.transform.GetChild(1).tag;
         string tag_enemy = game.positions[x, y].gameObject.transform.GetChild(1).tag;
+        //GameObject enemy = game.positions[x, y].gameObject;
         float combatXPos = game.positions[x, y].gameObject.transform.position.x;
         float combatYPos = game.positions[x, y].gameObject.transform.position.y;
 
         if (tag_ObjSelected != tag_enemy)
         {
+            //enemy.transform.GetChild(2).GetComponentInChildren<SpriteRenderer>().color = new Color("FF0000");
+
             Instantiate(tileCombat, new Vector2(combatXPos, combatYPos), Quaternion.identity);
         }
        

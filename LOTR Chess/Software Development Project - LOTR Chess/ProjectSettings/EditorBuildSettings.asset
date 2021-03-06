@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Game/Scenes/Game.unity
+    guid: 30d634fa48adbed4b98dab5e3a16ad86
+  - enabled: 1
+    path: Assets/Game/Scenes/HeroesWon.unity
+    guid: 2f5bfafd4bd63734bb18e95b3111e300
+  - enabled: 1
+    path: Assets/Game/Scenes/NazgulWon.unity
+    guid: 91c509e58b0e68346bbc79343623c3fa
   m_configObjects: {}

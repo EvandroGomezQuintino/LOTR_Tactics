@@ -17,8 +17,22 @@ public class GameController : MonoBehaviour
     // DONE: Check turns
     // DONE: Fix TileSelected respawn
     // DONE: Destroy TileMovement gameObjects
-    // TODO: Need to differentiate the pieces for each player, so Player 1 cant choose player 2 pieces
-    // TODO: After that, I can use start the attack movement.
+    // DONE: Need to differentiate the pieces for each player, so Player 1 cant choose player 2 pieces
+    // DONE: Implemented combat system
+    // TODO: Add the Montain Doom position
+    // TODO: Add the Eye element
+    // TODO: Add the winning conditions for both players
+    // TODO: Change movement set for the Heroes (specially hobbits)
+    // TODO: Add sprites for each piece
+    // TODO: Prepare email to Joe Roe about my project.The idea and which stage I am
+    // TODO: Add Multiplayer system
+    // TODO: Clean up code
+    // TODO: Add Canvas for Player's turn
+    // TODO: Add Scene for the main menu
+    // TODO: Finish Tilemap
+    // TODO: Add Audio
+    // TODO: Add Music
+    // TODO: Start Game Documentation
 
 
 
@@ -39,7 +53,8 @@ public class GameController : MonoBehaviour
     public GameObject _gandalf, aragorn, frodo, sam, merry, pippin, legolas, boromir, gimli;
     //Nazguls
     public GameObject witchKing, nazgul_1, nazgul_2, nazgul_3, nazgul_4, nazgul_5, nazgul_6, nazgul_7, nazgul_8;
-
+    //Other elements
+    public GameObject mountDoom;
 
     //Mapping Boardgame positions X and Y
     private Dictionary<float, int> xBoard;
@@ -90,19 +105,12 @@ public class GameController : MonoBehaviour
                 objSelected = hitdata.transform.gameObject;
 
                 //Checking if Piece selected belongs to player
-                if(objSelected.tag == "Tile_Movement")
+                if(objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Mordor")
                 {
                     //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - NAZGUL");
                     _movement.clickObj(objSelected);
                 }
-                else if (objSelected.transform.GetChild(1).tag=="Mordor")
-                {
-                    //Debug.LogError(objSelected.ToString());
-                    Debug.LogError("PLAYER 1 - NAZGUL");
-                    _movement.clickObj(objSelected);
-                }
-
             }
         }
         else if (Input.GetMouseButtonDown(0) && turn == BattleSystem.HEROES && player == Players.PLAYER2)
@@ -117,19 +125,12 @@ public class GameController : MonoBehaviour
                 objSelected = hitdata.transform.gameObject;
 
                 //Checking if Piece selected belongs to player
-                if (objSelected.tag == "Tile_Movement")
+                if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Heroes" )
                 {
                     //Debug.LogError(objSelected.ToString());
                     Debug.LogError("PLAYER 1 - HEROES");
                     _movement.clickObj(objSelected);
                 }
-                else if (objSelected.transform.GetChild(1).tag == "Heroes")
-                {
-                    //Debug.LogError(objSelected.ToString());
-                    Debug.LogError("PLAYER 1 - HEROES");
-                    _movement.clickObj(objSelected);
-                }
-
             }
         }
 
@@ -160,7 +161,8 @@ public class GameController : MonoBehaviour
         positions[xPos(nazgul_6.transform), yPos(nazgul_6.transform)] = Instantiate(nazgul_6);
         positions[xPos(nazgul_7.transform), yPos(nazgul_7.transform)] = Instantiate(nazgul_7);
         positions[xPos(nazgul_8.transform), yPos(nazgul_8.transform)] = Instantiate(nazgul_8);
-
+        //Adding MountDoom
+        positions[xPos(mountDoom.transform), yPos(mountDoom.transform)] = Instantiate(mountDoom);
 
 
         //TESTING x,y POSITIONS

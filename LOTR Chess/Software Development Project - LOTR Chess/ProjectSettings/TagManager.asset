@@ -23,6 +23,7 @@ TagManager:
   - witchking
   - Mordor
   - Tile_Combat
+  - MountDoom
   layers:
   - Default
   - TransparentFX
