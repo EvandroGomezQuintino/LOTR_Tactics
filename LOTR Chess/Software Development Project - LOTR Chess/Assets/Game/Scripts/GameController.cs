@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     // DONE: Add the Eye element
     // DONE: Add the winning conditions for both players
     // DONE: Add sprites for each piece
-    // TODO: Prepare email to Joe Roe about my project.The idea and which stage I am
+    // DONE: Prepare email to Joe Roe about my project.The idea and which stage I am
     // TODO: Add Multiplayer system
     // TODO: Clean up code
     // TODO: Add Canvas for Player's turn
