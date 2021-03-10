@@ -64,6 +64,10 @@ public class GameController : MonoBehaviour
     //BoardPositions
     public GameObject[,] positions = new GameObject[14, 14];
 
+    //UI Turn
+    public GameObject nazgulTurnUI;
+    public GameObject heroesTurnUI;
+
 
     //Movement
     public GameObject objSelected;
@@ -196,20 +200,21 @@ public class GameController : MonoBehaviour
     {
 
         // TODO:    Update UI Message
-        StartCoroutine(displayMessage());
+        //StartCoroutine(displayMessage());
 
         // User will be able to click after here
         player = Players.PLAYER1;
-
-
+        nazgulTurnUI.SetActive(true);
+        heroesTurnUI.SetActive(false);
     }
 
 
     public void heroesTurn()
     {
         // TODO:    Update UI Message
-        StartCoroutine(displayMessage());
-
+        //StartCoroutine(displayMessage());
+        heroesTurnUI.SetActive(true);
+        nazgulTurnUI.SetActive(false);
         // User will be able to click after here
         player = Players.PLAYER2;
 
@@ -223,13 +228,16 @@ public class GameController : MonoBehaviour
         //TODO: Check turn and display players turn
         if (turn == BattleSystem.NAZGUL)
         {
-            //TODO: Display Mordor Turn
+
+            nazgulTurnUI.SetActive(true);
             yield return new WaitForSeconds(2f);
+            nazgulTurnUI.SetActive(false);
         }
         else if (turn == BattleSystem.HEROES)
         {
-            //TODO: Display LOTR Turn
+            heroesTurnUI.SetActive(true);
             yield return new WaitForSeconds(2f);
+            heroesTurnUI.SetActive(false);
         }
     }
 
