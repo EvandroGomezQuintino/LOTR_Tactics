@@ -243,6 +243,7 @@ public class Movement : MonoBehaviour
             // Frodo dying results in Nazgul victory
             else
             {
+                Destroy(enemy);
                 // Displaying GameOver UI
                 game.gameOver(false);
             }
