@@ -37,8 +37,10 @@ public class Movement : MonoBehaviour
         //Converting world position into game position
         int objXposition = game.xPos(objSelected.transform);
         int objYposition = game.yPos(objSelected.transform);
-        Debug.LogError("X "+objXposition);
-        Debug.LogError("Y "+objYposition);
+        
+        // DEBUG Testing
+        //Debug.LogError("X "+objXposition);
+        //Debug.LogError("Y "+objYposition);
 
 
 
@@ -198,13 +200,15 @@ public class Movement : MonoBehaviour
             // If Frodo reaches the MountDoom
             if (previousPiece.transform.GetChild(0).tag == "frodo" && objXposition == 9 && objYposition == 10)
             {
-                // Loading Scene showing that Heroes Won
-                SceneManager.LoadScene("HeroesWon", LoadSceneMode.Single);
+                // Displaying GameOver UI                
+                game.gameOver(true);
 
             }
 
             actions++;
-            Debug.LogError("ACTIONS:" + actions);
+
+            //TESTING ACTION
+            //Debug.LogError("ACTIONS:" + actions);
 
 
         }
@@ -235,10 +239,12 @@ public class Movement : MonoBehaviour
             {
                 Destroy(enemy);
             }
-            // Frodo dying results in Mordors victory
+
+            // Frodo dying results in Nazgul victory
             else
             {
-                SceneManager.LoadScene("NazgulWon", LoadSceneMode.Single);
+                // Displaying GameOver UI
+                game.gameOver(false);
             }
 
             actions++;

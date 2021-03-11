@@ -237,7 +237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2251551136913261905, guid: be1acacbac010894880a9c393565c6dc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251551136913261905, guid: be1acacbac010894880a9c393565c6dc, type: 3}
+      propertyPath: m_TagString
+      value: NazgulWon
       objectReference: {fileID: 0}
     - target: {fileID: 2251551136913261918, guid: be1acacbac010894880a9c393565c6dc, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -296,6 +300,10 @@ PrefabInstance:
     - target: {fileID: 2251551136913261919, guid: be1acacbac010894880a9c393565c6dc, type: 3}
       propertyPath: m_margin.x
       value: -31.499125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251551136913261919, guid: be1acacbac010894880a9c393565c6dc, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be1acacbac010894880a9c393565c6dc, type: 3}
@@ -589,6 +597,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2251551136913261905, guid: be1acacbac010894880a9c393565c6dc, type: 3}
+      propertyPath: m_TagString
+      value: HeroesWon
+      objectReference: {fileID: 0}
     - target: {fileID: 2251551136913261918, guid: be1acacbac010894880a9c393565c6dc, type: 3}
       propertyPath: m_CullTransparentMesh
       value: 0
@@ -646,6 +658,10 @@ PrefabInstance:
     - target: {fileID: 2251551136913261919, guid: be1acacbac010894880a9c393565c6dc, type: 3}
       propertyPath: m_margin.x
       value: -31.499125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251551136913261919, guid: be1acacbac010894880a9c393565c6dc, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be1acacbac010894880a9c393565c6dc, type: 3}
@@ -1056,6 +1072,7 @@ MonoBehaviour:
   theEye: {fileID: 3541761813153056469, guid: 149b7a497b55d584695a42fc57f5d8b7, type: 3}
   nazgulTurnUI: {fileID: 1393617324}
   heroesTurnUI: {fileID: 1021696480}
+  gameOverUI: {fileID: 572543669}
   objSelected: {fileID: 0}
 --- !u!1 &1021696480
 GameObject:

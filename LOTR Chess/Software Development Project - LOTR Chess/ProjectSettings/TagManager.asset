@@ -25,6 +25,8 @@ TagManager:
   - Tile_Combat
   - MountDoom
   - Eye
+  - HeroesWon
+  - NazgulWon
   layers:
   - Default
   - TransparentFX

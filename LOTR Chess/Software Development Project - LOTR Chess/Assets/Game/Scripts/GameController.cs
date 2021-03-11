@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleSystem { START, NAZGUL, HEROES, WON, LOST }
+public enum BattleSystem { START, NAZGUL, HEROES, GAMEOVER }
 public enum Players { PLAYER1, PLAYER2 }
 
 
@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
     //UI Turn
     public GameObject nazgulTurnUI;
     public GameObject heroesTurnUI;
-
+    public GameObject gameOverUI;
 
     //Movement
     public GameObject objSelected;
@@ -112,7 +112,7 @@ public class GameController : MonoBehaviour
                 if(objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Mordor")
                 {
                     //Debug.LogError(objSelected.ToString());
-                    Debug.LogError("PLAYER 1 - NAZGUL");
+                    //Debug.LogError("PLAYER 1 - NAZGUL");
                     _movement.clickObj(objSelected);
                 }
             }
@@ -132,7 +132,7 @@ public class GameController : MonoBehaviour
                 if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Heroes" )
                 {
                     //Debug.LogError(objSelected.ToString());
-                    Debug.LogError("PLAYER 1 - HEROES");
+                    //Debug.LogError("PLAYER 1 - HEROES");
                     _movement.clickObj(objSelected);
                 }
             }
@@ -223,23 +223,23 @@ public class GameController : MonoBehaviour
 
 
 
-    IEnumerator displayMessage()
-    {
-        //TODO: Check turn and display players turn
-        if (turn == BattleSystem.NAZGUL)
-        {
+    //IEnumerator displayMessage()
+    //{
+    //    //TODO: Check turn and display players turn
+    //    if (turn == BattleSystem.NAZGUL)
+    //    {
 
-            nazgulTurnUI.SetActive(true);
-            yield return new WaitForSeconds(2f);
-            nazgulTurnUI.SetActive(false);
-        }
-        else if (turn == BattleSystem.HEROES)
-        {
-            heroesTurnUI.SetActive(true);
-            yield return new WaitForSeconds(2f);
-            heroesTurnUI.SetActive(false);
-        }
-    }
+    //        nazgulTurnUI.SetActive(true);
+    //        yield return new WaitForSeconds(2f);
+    //        nazgulTurnUI.SetActive(false);
+    //    }
+    //    else if (turn == BattleSystem.HEROES)
+    //    {
+    //        heroesTurnUI.SetActive(true);
+    //        yield return new WaitForSeconds(2f);
+    //        heroesTurnUI.SetActive(false);
+    //    }
+    //}
 
     // Loading dictionaries with World Position
     private void loadBoardPositions()
@@ -272,5 +272,36 @@ public class GameController : MonoBehaviour
         int yPosition = yBoard[objYPosition.GetComponent<Transform>().position.x];
         return yPosition;
     }
+
+    //Invoking GameOver UI and buttons
+    public void gameOver(bool victory)
+    {
+        // True = Heroes won
+        // False = Nazgul won
+
+        // Setting turn and blocking further player movements
+        turn = BattleSystem.GAMEOVER;
+
+        if (victory)
+        {
+         
+            // Displaying GameOver UI and options
+            gameOverUI.SetActive(true);
+            gameOverUI.transform.GetChild(0).gameObject.SetActive(true);
+
+         
+        }
+        else
+        {
+            // Displaying GameOver UI and options
+            gameOverUI.SetActive(true);
+            gameOverUI.transform.GetChild(1).gameObject.SetActive(true);
+
+        }
+
+
+    }
+
+
 }
 
