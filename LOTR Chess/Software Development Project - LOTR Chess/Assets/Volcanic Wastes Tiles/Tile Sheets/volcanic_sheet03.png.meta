@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: d58d8e3502347a746a7de5315277f6e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2780654034432152492
+    second: volcanic_sheet03_0
+  - first:
+      213: -3341212456439341315
+    second: volcanic_sheet03_1
+  - first:
+      213: -3509569502432713462
+    second: volcanic_sheet03_2
+  - first:
+      213: 6224343714597138859
+    second: volcanic_sheet03_3
+  - first:
+      213: 859357825600515304
+    second: volcanic_sheet03_4
+  - first:
+      213: -808637349551739527
+    second: volcanic_sheet03_5
+  - first:
+      213: -9126706443911408007
+    second: volcanic_sheet03_6
+  - first:
+      213: 4851557411342224852
+    second: volcanic_sheet03_7
+  - first:
+      213: 6678253729035874713
+    second: volcanic_sheet03_8
+  - first:
+      213: 8386357422346628389
+    second: volcanic_sheet03_9
+  - first:
+      213: -4427032979096226817
+    second: volcanic_sheet03_10
+  - first:
+      213: 9088932054035721116
+    second: volcanic_sheet03_11
+  - first:
+      213: -5720355885391406362
+    second: volcanic_sheet03_12
+  - first:
+      213: -6383033479503962491
+    second: volcanic_sheet03_13
+  - first:
+      213: 3598913127716731869
+    second: volcanic_sheet03_14
+  - first:
+      213: 6875224283255762507
+    second: volcanic_sheet03_15
+  - first:
+      213: 7069575265032192525
+    second: volcanic_sheet03_16
+  - first:
+      213: 3913429051240174290
+    second: volcanic_sheet03_17
+  - first:
+      213: -5927566441768878561
+    second: volcanic_sheet03_18
+  - first:
+      213: -6082047091838750654
+    second: volcanic_sheet03_19
+  - first:
+      213: -3808840386391082060
+    second: volcanic_sheet03_20
+  - first:
+      213: 6386370044674032912
+    second: volcanic_sheet03_21
+  - first:
+      213: -7103495454242432209
+    second: volcanic_sheet03_22
+  - first:
+      213: -1279491924435211646
+    second: volcanic_sheet03_23
+  - first:
+      213: 1589102011151795880
+    second: volcanic_sheet03_24
+  - first:
+      213: 4180655051491828890
+    second: volcanic_sheet03_25
+  - first:
+      213: -6691329642472731608
+    second: volcanic_sheet03_26
+  - first:
+      213: 241253890505521618
+    second: volcanic_sheet03_27
+  - first:
+      213: -578889315328772418
+    second: volcanic_sheet03_28
+  - first:
+      213: -5558897297351623827
+    second: volcanic_sheet03_29
+  - first:
+      213: -4094315688620420817
+    second: volcanic_sheet03_30
+  - first:
+      213: -2053826060489114330
+    second: volcanic_sheet03_31
+  - first:
+      213: -4956377943598559263
+    second: volcanic_sheet03_32
+  - first:
+      213: -7159940073811047708
+    second: volcanic_sheet03_33
+  - first:
+      213: -108670409746009106
+    second: volcanic_sheet03_34
+  - first:
+      213: -3510812333159775543
+    second: volcanic_sheet03_35
+  - first:
+      213: 3324836782738630069
+    second: volcanic_sheet03_36
+  - first:
+      213: 5274801439548917404
+    second: volcanic_sheet03_37
+  - first:
+      213: -3767653147707579762
+    second: volcanic_sheet03_38
+  - first:
+      213: 7489865224285464700
+    second: volcanic_sheet03_39
+  - first:
+      213: 9045540976446757716
+    second: volcanic_sheet03_40
+  - first:
+      213: 7166446148974335549
+    second: volcanic_sheet03_41
+  - first:
+      213: 9157176597469342063
+    second: volcanic_sheet03_42
+  - first:
+      213: -1317328181511846214
+    second: volcanic_sheet03_43
+  - first:
+      213: -2537877544688695102
+    second: volcanic_sheet03_44
+  - first:
+      213: 7628466137939375621
+    second: volcanic_sheet03_45
+  - first:
+      213: 7685533142010553485
+    second: volcanic_sheet03_46
+  - first:
+      213: 2082165204314292843
+    second: volcanic_sheet03_47
+  - first:
+      213: -5711679861222749603
+    second: volcanic_sheet03_48
+  - first:
+      213: 2474074856176600897
+    second: volcanic_sheet03_49
+  - first:
+      213: 5944188212029952865
+    second: volcanic_sheet03_50
+  - first:
+      213: 5707466637563028341
+    second: volcanic_sheet03_51
+  - first:
+      213: 5466362632265004936
+    second: volcanic_sheet03_52
+  - first:
+      213: -6375793841937767481
+    second: volcanic_sheet03_53
+  - first:
+      213: -5398473806079070407
+    second: volcanic_sheet03_54
+  - first:
+      213: -1106264069930385381
+    second: volcanic_sheet03_55
+  - first:
+      213: -3183914754014705534
+    second: volcanic_sheet03_56
+  - first:
+      213: -3748914366885385227
+    second: volcanic_sheet03_57
+  - first:
+      213: 8720836780712714656
+    second: volcanic_sheet03_58
+  - first:
+      213: 2055471447054250624
+    second: volcanic_sheet03_59
+  - first:
+      213: 6182556781363108963
+    second: volcanic_sheet03_60
+  - first:
+      213: 8733932501011200671
+    second: volcanic_sheet03_61
+  - first:
+      213: 3790140034305814009
+    second: volcanic_sheet03_62
+  - first:
+      213: -3823154768942147880
+    second: volcanic_sheet03_63
+  - first:
+      213: 6107208169627688924
+    second: volcanic_sheet03_64
+  - first:
+      213: -4192053783832445601
+    second: volcanic_sheet03_65
+  - first:
+      213: 5932453959090756345
+    second: volcanic_sheet03_66
+  - first:
+      213: -929908531616646943
+    second: volcanic_sheet03_67
+  - first:
+      213: 4093934726743246605
+    second: volcanic_sheet03_68
+  - first:
+      213: -6337189164259990042
+    second: volcanic_sheet03_69
+  - first:
+      213: -2456852016201313803
+    second: volcanic_sheet03_70
+  - first:
+      213: -3306879944866408809
+    second: volcanic_sheet03_71
+  - first:
+      213: -5405660046932770428
+    second: volcanic_sheet03_72
+  - first:
+      213: 1108991801512553308
+    second: volcanic_sheet03_73
+  - first:
+      213: 7272735089808725652
+    second: volcanic_sheet03_74
+  - first:
+      213: -4259088126812896325
+    second: volcanic_sheet03_75
+  - first:
+      213: 1595552215804242372
+    second: volcanic_sheet03_76
+  - first:
+      213: -718746425185389339
+    second: volcanic_sheet03_77
+  - first:
+      213: -6287630196875260963
+    second: volcanic_sheet03_78
+  - first:
+      213: -1547470867046657246
+    second: volcanic_sheet03_79
+  - first:
+      213: -750188088688162930
+    second: volcanic_sheet03_80
+  - first:
+      213: -4508308047896100832
+    second: volcanic_sheet03_81
+  - first:
+      213: -4845204512106375810
+    second: volcanic_sheet03_82
+  - first:
+      213: -6229637098063902749
+    second: volcanic_sheet03_83
+  - first:
+      213: -1441678107753431865
+    second: volcanic_sheet03_84
+  - first:
+      213: 6795782343624206652
+    second: volcanic_sheet03_85
+  - first:
+      213: -2415089632909021233
+    second: volcanic_sheet03_86
+  - first:
+      213: -5344390474855781166
+    second: volcanic_sheet03_87
+  - first:
+      213: 1543107951041010910
+    second: volcanic_sheet03_88
+  - first:
+      213: -5034897836093238300
+    second: volcanic_sheet03_89
+  - first:
+      213: 5458357979088355496
+    second: volcanic_sheet03_90
+  - first:
+      213: 4584089272499063843
+    second: volcanic_sheet03_91
+  - first:
+      213: -3540638931115280721
+    second: volcanic_sheet03_92
+  - first:
+      213: -2005977235618056346
+    second: volcanic_sheet03_93
+  - first:
+      213: -1595472870694696555
+    second: volcanic_sheet03_94
+  - first:
+      213: -6307350452909113067
+    second: volcanic_sheet03_95
+  - first:
+      213: 1244420347638339723
+    second: volcanic_sheet03_96
+  - first:
+      213: -8905767530388974054
+    second: volcanic_sheet03_97
+  - first:
+      213: 6090457146586526686
+    second: volcanic_sheet03_98
+  - first:
+      213: 3728542002734142483
+    second: volcanic_sheet03_99
+  - first:
+      213: -8252377349711999828
+    second: volcanic_sheet03_100
+  - first:
+      213: -4061243958836077054
+    second: volcanic_sheet03_101
+  - first:
+      213: -6482340245718766343
+    second: volcanic_sheet03_102
+  - first:
+      213: 3240200096395898971
+    second: volcanic_sheet03_103
+  - first:
+      213: -15894771084125137
+    second: volcanic_sheet03_104
+  - first:
+      213: -4247550078115556153
+    second: volcanic_sheet03_0
+  - first:
+      213: -8340508149527606443
+    second: volcanic_sheet03_1
+  - first:
+      213: -4897989948949122796
+    second: volcanic_sheet03_2
+  - first:
+      213: 5409582038997686425
+    second: volcanic_sheet03_3
+  - first:
+      213: -8649287952186569255
+    second: volcanic_sheet03_4
+  - first:
+      213: 4107721121168693997
+    second: volcanic_sheet03_5
+  - first:
+      213: -981263129193906673
+    second: volcanic_sheet03_6
+  - first:
+      213: -8683617822439778551
+    second: volcanic_sheet03_7
+  - first:
+      213: 8786565001344596432
+    second: volcanic_sheet03_8
+  - first:
+      213: 3767964426999735281
+    second: volcanic_sheet03_9
+  - first:
+      213: -4549530571105058794
+    second: volcanic_sheet03_10
+  - first:
+      213: 6027023158098407670
+    second: volcanic_sheet03_11
+  - first:
+      213: -8805015081300253326
+    second: volcanic_sheet03_12
+  - first:
+      213: -257236669508272941
+    second: volcanic_sheet03_13
+  - first:
+      213: 3576871781519401163
+    second: volcanic_sheet03_14
+  - first:
+      213: 5770880893368849998
+    second: volcanic_sheet03_15
+  - first:
+      213: 4254127519101182016
+    second: volcanic_sheet03_35
+  - first:
+      213: 5011569836128951254
+    second: volcanic_sheet03_36
+  - first:
+      213: -8736527947102452196
+    second: volcanic_sheet03_37
+  - first:
+      213: -8271678420048991987
+    second: volcanic_sheet03_38
+  - first:
+      213: -1790274728322164049
+    second: volcanic_sheet03_39
+  - first:
+      213: 3057504260637682078
+    second: volcanic_sheet03_40
+  - first:
+      213: -4696978721838584613
+    second: volcanic_sheet03_41
+  - first:
+      213: 8064361907886152344
+    second: volcanic_sheet03_42
+  - first:
+      213: -723300936028549680
+    second: volcanic_sheet03_43
+  - first:
+      213: 5677131435601111155
+    second: volcanic_sheet03_44
+  - first:
+      213: -3288739851885895833
+    second: volcanic_sheet03_45
+  - first:
+      213: 8223296316951131652
+    second: volcanic_sheet03_46
+  - first:
+      213: 2708534781113477450
+    second: volcanic_sheet03_47
+  - first:
+      213: -7271188724387670753
+    second: volcanic_sheet03_16
+  - first:
+      213: -747886729354819677
+    second: volcanic_sheet03_17
+  - first:
+      213: -2427171131033573866
+    second: volcanic_sheet03_18
+  - first:
+      213: 16229797140857531
+    second: volcanic_sheet03_19
+  - first:
+      213: -6497386824552866027
+    second: volcanic_sheet03_20
+  - first:
+      213: -2373163600231465798
+    second: volcanic_sheet03_21
+  - first:
+      213: 7923183586718593272
+    second: volcanic_sheet03_22
+  - first:
+      213: 8203022069484960750
+    second: volcanic_sheet03_23
+  - first:
+      213: -5486717988909733031
+    second: volcanic_sheet03_24
+  - first:
+      213: 2536086203676612801
+    second: volcanic_sheet03_25
+  - first:
+      213: 19891852623115849
+    second: volcanic_sheet03_26
+  - first:
+      213: 4473772420284618191
+    second: volcanic_sheet03_27
+  - first:
+      213: -1857031665465737950
+    second: volcanic_sheet03_28
+  - first:
+      213: 3092924094142357089
+    second: volcanic_sheet03_29
+  - first:
+      213: 2686406609688491037
+    second: volcanic_sheet03_30
+  - first:
+      213: -216613522596846130
+    second: volcanic_sheet03_31
+  - first:
+      213: 4400870110851327660
+    second: volcanic_sheet03_32
+  - first:
+      213: -4455398150675683484
+    second: volcanic_sheet03_33
+  - first:
+      213: -1893479497632788095
+    second: volcanic_sheet03_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 775, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: volcanic_sheet03_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c45d3c55bbad05c0800000000000000
+      internalID: -4247550078115556153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b08252700904c80800000000000000
+      internalID: -8340508149527606443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41134739718d60cb0800000000000000
+      internalID: -4897989948949122796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9985ac90432b21b40800000000000000
+      internalID: 5409582038997686425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd8ad1fe6e87f780800000000000000
+      internalID: -8649287952186569255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea11a7989e810930800000000000000
+      internalID: 4107721121168693997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7539026ad162f0800000000000000
+      internalID: -981263129193906673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907d93829979d7780800000000000000
+      internalID: -8683617822439778551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d93605c05620f970800000000000000
+      internalID: 8786565001344596432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 150
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3a0adceaf7a4430800000000000000
+      internalID: 3767964426999735281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610c08ecc02dcd0c0800000000000000
+      internalID: -4549530571105058794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0328731a944a350800000000000000
+      internalID: 6027023158098407670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275242d3f6d4ec580800000000000000
+      internalID: -8805015081300253326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc31caac9c1e6cf0800000000000000
+      internalID: -257236669508272941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc025982fe993a130800000000000000
+      internalID: 3576871781519401163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46d65ad899461050800000000000000
+      internalID: 5770880893368849998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_16
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f151c0c216c871b90800000000000000
+      internalID: -7271188724387670753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_17
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7c39c6bf8fe95f0800000000000000
+      internalID: -747886729354819677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61629ad47b4f05ed0800000000000000
+      internalID: -2427171131033573866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volcanic_sheet03_19
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 50
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb28b5d1ae8a93000800000000000000
+      internalID: 16229797140857531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
