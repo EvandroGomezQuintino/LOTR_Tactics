@@ -39,10 +39,6 @@ public class GameController : MonoBehaviour
 
 
 
-
-
-
-
     // ************** STEP LIST *****************
     //The game stages
     public BattleSystem turn;
@@ -55,6 +51,10 @@ public class GameController : MonoBehaviour
     //Other elements
     public GameObject mountDoom;
     public GameObject theEye;
+    //TEST CONNECTION
+    public GameObject GAMECONNECTION;
+    public GameObject GAMECONNECTION2;
+
 
     //Mapping Boardgame positions X and Y
     private Dictionary<float, int> xBoard;
