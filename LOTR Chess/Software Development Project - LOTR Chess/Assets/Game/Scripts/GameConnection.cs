@@ -27,15 +27,21 @@ public class GameConnection : MonoBehaviourPunCallbacks
     private void Awake()
     {
 
-        chatlog.text += "\nConnecting to the server";
+        if(GameObject.Find("BackGround").GetComponent<DontDestroy>().localGameMode == true)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            chatlog.text += "\nConnecting to the server";
 
-        // Setup Connection
-        PlayerName = PhotonNetwork.LocalPlayer.NickName;
-        // Connecting using Photon settings
-        PhotonNetwork.ConnectUsingSettings();
+            // Setup Connection
+            PlayerName = PhotonNetwork.LocalPlayer.NickName;
+            // Connecting using Photon settings
+            PhotonNetwork.ConnectUsingSettings();
 
-        game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-
+            game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        }
 
     }
 

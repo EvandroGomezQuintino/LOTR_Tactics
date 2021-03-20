@@ -76,6 +76,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
 
+
+
         //Board mapping
         xBoard = new Dictionary<float, int>();
         yBoard = new Dictionary<float, int>();

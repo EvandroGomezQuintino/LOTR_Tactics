@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     public TMP_Text textMenu;
 
 
+
+
     void OnMouseOver()
     {
         textMenu.fontStyle = FontStyles.Underline;
@@ -41,8 +43,16 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void LocalGame()
+    {
+        GameObject.Find("BackGround").GetComponent<DontDestroy>().localGameMode = true;
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
 
-
-
+    public void MultiplayerGame()
+    {
+        GameObject.Find("BackGround").GetComponent<DontDestroy>().multiplayerGameMode = true;
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
 
 }
