@@ -13,11 +13,20 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
+
+
+    public AudioSource selectedMenu;
     public TMP_Text textMenu;
 
+    private void Awake()
+    {
+        //selectedMenu = gameObject.AddComponent<AudioSource>();
+        //selectedMenu.clip = (AudioClip)Resources.Load("Sound/menu_clickSound");
+        //Debug.LogError(selectedMenu);
+    }
+     
 
-
-
+    
     void OnMouseOver()
     {
         textMenu.fontStyle = FontStyles.Underline;
@@ -53,6 +62,11 @@ public class MainMenu : MonoBehaviour
     {
         GameObject.Find("BackGround").GetComponent<DontDestroy>().multiplayerGameMode = true;
         SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
+
+    public void playSound()
+    {
+        selectedMenu.Play();
     }
 
 }
