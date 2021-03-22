@@ -27,6 +27,7 @@ TagManager:
   - Eye
   - HeroesWon
   - NazgulWon
+  - Multiplayer
   layers:
   - Default
   - TransparentFX

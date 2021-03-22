@@ -497,8 +497,8 @@ GameObject:
   - component: {fileID: 182532371}
   - component: {fileID: 182532370}
   m_Layer: 0
-  m_Name: GameConnection
-  m_TagString: Untagged
+  m_Name: Multiplayer
+  m_TagString: Multiplayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,6 +517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerName: 
   game: {fileID: 0}
+  player: 0
+  textEvandro: Evandro
   chatlog: {fileID: 1652553461}
 --- !u!4 &182532371
 Transform:
@@ -736,7 +738,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415637871}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &415637873
 Camera:
   m_ObjectHideFlags: 0
@@ -1037,6 +1039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 655440800}
+  multiplayer: {fileID: 0}
+  photonView: {fileID: 632090066}
   tileCombat: {fileID: 2685455170600492810, guid: 45cd858ada552d142bddf89651467599, type: 3}
 --- !u!4 &632090065
 Transform:
@@ -1061,9 +1065,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 632090063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd01ec2bfcaba948aa0f44fe7d71b90, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &655440798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: 0
   player: 0
-  _gandalf: {fileID: 5570247947672531934, guid: 67c50893020fe3e4d87298791b499bec, type: 3}
+  gameModeMultiplayer: 0
+  _gandalf: {fileID: 5570247947672531934, guid: fcca7b33aa1229f45911a1623a6b9d35, type: 3}
   aragorn: {fileID: 3745012473056720779, guid: 10746fd5c3c8b8348be3eda96fb96e45, type: 3}
   frodo: {fileID: 1252616720348416226, guid: 860f963baa4c3e9448fa9e309184f94a, type: 3}
   sam: {fileID: 3401023618866058817, guid: 358a16ba278514f42b5a78ee4b0054e1, type: 3}
@@ -1118,7 +1133,7 @@ MonoBehaviour:
   legolas: {fileID: 8095643419249195040, guid: 422ca16b1030ee44199ad4ea54206460, type: 3}
   boromir: {fileID: 5928879937532269841, guid: 2c4e46d9867b2774c9a9889bb3f004b4, type: 3}
   gimli: {fileID: 9013115394832842695, guid: 7faad7e01e96dda4c9c48fde4cea8b3c, type: 3}
-  witchKing: {fileID: 4654533243573404962, guid: 1670333bfe1227542bebfe1205796327, type: 3}
+  witchKing: {fileID: 4654533243573404962, guid: 9803b0077e1bf524b960c731875868a0, type: 3}
   nazgul_1: {fileID: 1416285873386653652, guid: 6aa91c9956a1c1140a994f6554cf575a, type: 3}
   nazgul_2: {fileID: 8711949950704596891, guid: f311b3cd3faae264ba6ff39c225c2bd4, type: 3}
   nazgul_3: {fileID: 428994777607079702, guid: 79fc45024f02b0a49beaecb7d31d9a56, type: 3}
@@ -1129,12 +1144,11 @@ MonoBehaviour:
   nazgul_8: {fileID: 8618292448840953687, guid: e0df9a187627f854e80b8cfe7dd3bc9d, type: 3}
   mountDoom: {fileID: 2975344220927149141, guid: 9dbca2bb5c3b8d84f9198fd5bd10fd46, type: 3}
   theEye: {fileID: 3541761813153056469, guid: 149b7a497b55d584695a42fc57f5d8b7, type: 3}
-  GAMECONNECTION: {fileID: 5570247947672531934, guid: 67c50893020fe3e4d87298791b499bec, type: 3}
-  GAMECONNECTION2: {fileID: 4654533243573404962, guid: 9803b0077e1bf524b960c731875868a0, type: 3}
   nazgulTurnUI: {fileID: 1393617324}
   heroesTurnUI: {fileID: 1021696480}
   gameOverUI: {fileID: 572543669}
   objSelected: {fileID: 0}
+  multiplayer: {fileID: 0}
 --- !u!1 &914838851
 GameObject:
   m_ObjectHideFlags: 0

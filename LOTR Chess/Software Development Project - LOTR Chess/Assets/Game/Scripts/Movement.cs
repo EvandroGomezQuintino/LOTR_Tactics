@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+
+
+
 
 public class Movement : MonoBehaviour
 {
     private int actions = 0;
     public GameController game;
+    public Connection multiplayer;
     //public PathMoveSet moveSet;
+    public PhotonView photonView;
+
 
     //Tiles
     //public GameObject tileSelected;
@@ -257,16 +264,41 @@ public class Movement : MonoBehaviour
         // Checking if two actions were used per player
         if (actions == 2)
         {
-            if (game.player == Players.PLAYER1)
+            //Local Game GameMode
+            if (!game.gameModeMultiplayer)
             {
-                game.turn = BattleSystem.HEROES;
-                game.heroesTurn();
+                if (game.player == Players.PLAYER1)
+                {
+                    game.turn = BattleSystem.HEROES;
+                    game.heroesTurn();
+
+                }
+                else if (game.player == Players.PLAYER2)
+                {
+                    game.turn = BattleSystem.NAZGUL;
+                    game.nazgulTurn();
+
+                }
                 actions = 0;
             }
-            else if (game.player == Players.PLAYER2)
+            //Multiplayer GameMode
+            else
             {
-                game.turn = BattleSystem.NAZGUL;
-                game.nazgulTurn();
+                //Changing Player's turn
+                if(game.turn == BattleSystem.NAZGUL)
+                {
+                    photonView.RPC("changeTurn", RpcTarget.All,game.turn);
+                    //multiplayer.changeTurn(game.turn);
+
+
+                }
+                else if(game.turn == BattleSystem.HEROES)
+                {
+                    photonView.RPC("changeTurn", RpcTarget.All, game.turn);
+                    //multiplayer.changeTurn(game.turn);
+         
+
+                }
                 actions = 0;
             }
         }
@@ -332,5 +364,29 @@ public class Movement : MonoBehaviour
 
 
     }
+
+
+    // Updating current status for all players
+    [PunRPC]
+    public void changeTurn(BattleSystem turn)
+    {
+        // Changing Player's turn
+        if (turn == BattleSystem.NAZGUL)
+        {
+            game.turn = BattleSystem.HEROES;
+            game.heroesTurnUI.SetActive(true);
+            game.nazgulTurnUI.SetActive(false);
+        }
+        // Changing Player's turn
+        else if (turn == BattleSystem.HEROES)
+        {
+            game.turn = BattleSystem.NAZGUL;
+            game.nazgulTurnUI.SetActive(true);
+            game.heroesTurnUI.SetActive(false);
+        }
+    }
+
+
+
 
 }

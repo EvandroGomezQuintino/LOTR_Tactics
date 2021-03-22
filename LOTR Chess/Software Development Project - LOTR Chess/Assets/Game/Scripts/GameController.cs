@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
 
 public enum BattleSystem { START, NAZGUL, HEROES, GAMEOVER }
 public enum Players { PLAYER1, PLAYER2 }
@@ -44,6 +45,10 @@ public class GameController : MonoBehaviour
     public BattleSystem turn;
     public Players player;
 
+    //Game Mode
+    public bool gameModeMultiplayer;
+
+
     //Heroes Pieces
     public GameObject _gandalf, aragorn, frodo, sam, merry, pippin, legolas, boromir, gimli;
     //Nazguls
@@ -51,9 +56,6 @@ public class GameController : MonoBehaviour
     //Other elements
     public GameObject mountDoom;
     public GameObject theEye;
-    //TEST CONNECTION
-    public GameObject GAMECONNECTION;
-    public GameObject GAMECONNECTION2;
 
 
     //Mapping Boardgame positions X and Y
@@ -72,6 +74,7 @@ public class GameController : MonoBehaviour
     //Movement
     public GameObject objSelected;
     private Movement _movement;
+    public Connection multiplayer;
 
     void Start()
     {
@@ -81,10 +84,25 @@ public class GameController : MonoBehaviour
         //Board mapping
         xBoard = new Dictionary<float, int>();
         yBoard = new Dictionary<float, int>();
-
-
         turn = BattleSystem.START;
         _movement = GameObject.FindWithTag("Movement").GetComponent<Movement>();
+
+
+
+        // Checking GameMode selected on MainMenu (Local or Multiplayer)
+        if (GameObject.Find("BackGround").GetComponent<DontDestroy>().localGameMode == true)
+        {
+            GameObject.Find("Multiplayer").SetActive(false);
+            gameModeMultiplayer = false;
+            
+        }
+        else
+        {
+            gameModeMultiplayer = true;
+            multiplayer = GameObject.FindWithTag("Multiplayer").GetComponent<Connection>();
+            
+        }
+
         //Adding delay when changing the turn
         gameSetup();
 
@@ -93,52 +111,61 @@ public class GameController : MonoBehaviour
         nazgulTurn();
     }
 
+    
     //Update is called once per frame
     void Update()
     {
-        //TESTING IENUMERATOR IN THE MOVEMENT FUNCTION
+        
 
-        if (Input.GetMouseButtonDown(0) && turn == BattleSystem.NAZGUL && player == Players.PLAYER1)
-        {
-            //Tracing mouse position and returning GameObject
-            Ray ray;
-            RaycastHit hitdata;
-
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hitdata, 20))
+        if (Input.GetMouseButtonDown(0))
             {
-
-                objSelected = hitdata.transform.gameObject;
-
-                //Checking if Piece selected belongs to player
-                if(objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Mordor")
-                {
-                    //Debug.LogError(objSelected.ToString());
-                    //Debug.LogError("PLAYER 1 - NAZGUL");
-                    _movement.clickObj(objSelected);
-                }
+            pieceSelection();
             }
-        }
-        else if (Input.GetMouseButtonDown(0) && turn == BattleSystem.HEROES && player == Players.PLAYER2)
-        {
-            // Tracing mouse position and returning GameObject 
-            Ray ray;
-            RaycastHit hitdata;
+        
 
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hitdata, 20))
-            {
-                objSelected = hitdata.transform.gameObject;
 
-                //Checking if Piece selected belongs to player
-                if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Heroes" )
-                {
-                    //Debug.LogError(objSelected.ToString());
-                    //Debug.LogError("PLAYER 1 - HEROES");
-                    _movement.clickObj(objSelected);
-                }
-            }
-        }
+        //if (Input.GetMouseButtonDown(0) && turn == BattleSystem.NAZGUL && player == Players.PLAYER1)
+        //{
+        //    //Tracing mouse position and returning GameObject
+        //    Ray ray;
+        //    RaycastHit hitdata;
+
+        //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    if (Physics.Raycast(ray, out hitdata, 20))
+        //    {
+
+        //        objSelected = hitdata.transform.gameObject;
+
+        //        //Checking if Piece selected belongs to player
+        //        if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || /*multiplayer.pieceSelected(objSelected) == true*/ objSelected.transform.GetChild(1).tag == "Mordor")
+        //        {
+        //            //Debug.LogError(objSelected.ToString());
+        //            //Debug.LogError("PLAYER 1 - NAZGUL");
+        //            _movement.clickObj(objSelected);
+        //        }
+        //    }
+        //}
+        //else if (Input.GetMouseButtonDown(0) && turn == BattleSystem.HEROES && player == Players.PLAYER2)
+        //{
+        //    // Tracing mouse position and returning GameObject 
+        //    Ray ray;
+        //    RaycastHit hitdata;
+
+        //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    if (Physics.Raycast(ray, out hitdata, 20))
+        //    {
+        //        objSelected = hitdata.transform.gameObject;
+
+
+        //        //Checking if Piece selected belongs to player
+        //        if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Heroes")
+        //        {
+        //            //Debug.LogError(objSelected.ToString());
+        //            //Debug.LogError("PLAYER 1 - HEROES");
+        //            _movement.clickObj(objSelected);
+        //        }
+        //    }
+        //}
 
 
     }
@@ -148,25 +175,31 @@ public class GameController : MonoBehaviour
     {
         loadBoardPositions();
 
-        //Mapping pieces in the boardgame and Instiating GameObjects
-        positions[xPos(_gandalf.transform), yPos(_gandalf.transform)] = Instantiate(_gandalf);
-        positions[xPos(aragorn.transform), yPos(aragorn.transform)] = Instantiate(aragorn);
-        positions[xPos(frodo.transform), yPos(frodo.transform)] = Instantiate(frodo);
-        positions[xPos(sam.transform), yPos(sam.transform)] = Instantiate(sam);
-        positions[xPos(merry.transform), yPos(merry.transform)] = Instantiate(merry);
-        positions[xPos(pippin.transform), yPos(pippin.transform)] = Instantiate(pippin);
-        positions[xPos(legolas.transform), yPos(legolas.transform)] = Instantiate(legolas);
-        positions[xPos(boromir.transform), yPos(boromir.transform)] = Instantiate(boromir);
-        positions[xPos(gimli.transform), yPos(gimli.transform)] = Instantiate(gimli);
-        positions[xPos(witchKing.transform), yPos(witchKing.transform)] = Instantiate(witchKing);
-        positions[xPos(nazgul_1.transform), yPos(nazgul_1.transform)] = Instantiate(nazgul_1);
-        positions[xPos(nazgul_2.transform), yPos(nazgul_2.transform)] = Instantiate(nazgul_2);
-        positions[xPos(nazgul_3.transform), yPos(nazgul_3.transform)] = Instantiate(nazgul_3);
-        positions[xPos(nazgul_4.transform), yPos(nazgul_4.transform)] = Instantiate(nazgul_4);
-        positions[xPos(nazgul_5.transform), yPos(nazgul_5.transform)] = Instantiate(nazgul_5);
-        positions[xPos(nazgul_6.transform), yPos(nazgul_6.transform)] = Instantiate(nazgul_6);
-        positions[xPos(nazgul_7.transform), yPos(nazgul_7.transform)] = Instantiate(nazgul_7);
-        positions[xPos(nazgul_8.transform), yPos(nazgul_8.transform)] = Instantiate(nazgul_8);
+
+
+        if (!gameModeMultiplayer)
+        {
+            //Mapping pieces in the boardgame and Instiating GameObjects
+            positions[xPos(_gandalf.transform), yPos(_gandalf.transform)] = Instantiate(_gandalf);
+            positions[xPos(aragorn.transform), yPos(aragorn.transform)] = Instantiate(aragorn);
+            positions[xPos(frodo.transform), yPos(frodo.transform)] = Instantiate(frodo);
+            positions[xPos(sam.transform), yPos(sam.transform)] = Instantiate(sam);
+            positions[xPos(merry.transform), yPos(merry.transform)] = Instantiate(merry);
+            positions[xPos(pippin.transform), yPos(pippin.transform)] = Instantiate(pippin);
+            positions[xPos(legolas.transform), yPos(legolas.transform)] = Instantiate(legolas);
+            positions[xPos(boromir.transform), yPos(boromir.transform)] = Instantiate(boromir);
+            positions[xPos(gimli.transform), yPos(gimli.transform)] = Instantiate(gimli);
+            positions[xPos(witchKing.transform), yPos(witchKing.transform)] = Instantiate(witchKing);
+            positions[xPos(nazgul_1.transform), yPos(nazgul_1.transform)] = Instantiate(nazgul_1);
+            positions[xPos(nazgul_2.transform), yPos(nazgul_2.transform)] = Instantiate(nazgul_2);
+            positions[xPos(nazgul_3.transform), yPos(nazgul_3.transform)] = Instantiate(nazgul_3);
+            positions[xPos(nazgul_4.transform), yPos(nazgul_4.transform)] = Instantiate(nazgul_4);
+            positions[xPos(nazgul_5.transform), yPos(nazgul_5.transform)] = Instantiate(nazgul_5);
+            positions[xPos(nazgul_6.transform), yPos(nazgul_6.transform)] = Instantiate(nazgul_6);
+            positions[xPos(nazgul_7.transform), yPos(nazgul_7.transform)] = Instantiate(nazgul_7);
+            positions[xPos(nazgul_8.transform), yPos(nazgul_8.transform)] = Instantiate(nazgul_8);
+        }
+        
         //Adding MountDoom and the Eye
         positions[xPos(mountDoom.transform), yPos(mountDoom.transform)] = Instantiate(mountDoom);
         positions[7,13] = Instantiate(theEye);
@@ -200,48 +233,34 @@ public class GameController : MonoBehaviour
     // Mordor Player turn
     public void nazgulTurn()
     {
-
-        // TODO:    Update UI Message
-        //StartCoroutine(displayMessage());
-
-        // User will be able to click after here
-        player = Players.PLAYER1;
+        // Changing UI
         nazgulTurnUI.SetActive(true);
         heroesTurnUI.SetActive(false);
+
+        // If Local GameMode, Player1 is set here
+        if (!multiplayer)
+        {
+            player = Players.PLAYER1;
+        }
     }
 
 
     public void heroesTurn()
     {
-        // TODO:    Update UI Message
-        //StartCoroutine(displayMessage());
+        
+        // Changing UI
         heroesTurnUI.SetActive(true);
         nazgulTurnUI.SetActive(false);
-        // User will be able to click after here
-        player = Players.PLAYER2;
+        
 
-
+        // If Local GameMode, Player1 is set here
+        if (!multiplayer)
+        {
+            player = Players.PLAYER2;
+        }
+       
     }
 
-
-
-    //IEnumerator displayMessage()
-    //{
-    //    //TODO: Check turn and display players turn
-    //    if (turn == BattleSystem.NAZGUL)
-    //    {
-
-    //        nazgulTurnUI.SetActive(true);
-    //        yield return new WaitForSeconds(2f);
-    //        nazgulTurnUI.SetActive(false);
-    //    }
-    //    else if (turn == BattleSystem.HEROES)
-    //    {
-    //        heroesTurnUI.SetActive(true);
-    //        yield return new WaitForSeconds(2f);
-    //        heroesTurnUI.SetActive(false);
-    //    }
-    //}
 
     // Loading dictionaries with World Position
     private void loadBoardPositions()
@@ -303,6 +322,78 @@ public class GameController : MonoBehaviour
 
 
     }
+
+
+
+
+    /// <summary>
+    /// ESSA METHODO PRECISA SER ATUALIZADO... PRECISO ARRUMAR UMA FORMA DE DIFERENCIAR QUEM CLICK
+    /// </summary>
+    
+    public void pieceSelection()
+    {
+        Ray ray;
+        RaycastHit hitdata;
+
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (gameModeMultiplayer)
+        {
+            
+            if (Physics.Raycast(ray, out hitdata, 20) )
+            {
+                objSelected = hitdata.transform.gameObject;
+
+            
+                if (turn == BattleSystem.NAZGUL && player == Players.PLAYER1 || turn == BattleSystem.HEROES && player == Players.PLAYER2 /*&& multiplayer.nazgulControoler(objSelected)==true*/)
+                {
+                    
+                    //Checking if Piece selected belongs to player
+                    if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || multiplayer.pieceSelected(objSelected) == true)
+                    {
+                        //TEST
+                        //Debug.LogError(turn);
+                        //Debug.LogError(player);
+                        _movement.clickObj(objSelected);
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(ray, out hitdata, 20) && turn == BattleSystem.NAZGUL && player == Players.PLAYER1)
+            {
+                objSelected = hitdata.transform.gameObject;
+
+
+                //Checking if Piece selected belongs to player
+                if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Mordor")
+                {
+                    //Debug.LogError(objSelected.ToString());
+                    //Debug.LogError("PLAYER 1 - HEROES");
+                    _movement.clickObj(objSelected);
+                }
+            }
+            else if (Physics.Raycast(ray, out hitdata, 20) && turn == BattleSystem.HEROES && player == Players.PLAYER2)
+            {
+                objSelected = hitdata.transform.gameObject;
+
+
+                //Checking if Piece selected belongs to player
+                if (objSelected.tag == "Tile_Movement" || objSelected.tag == "Tile_Combat" || objSelected.transform.GetChild(1).tag == "Heroes")
+                {
+                    //Debug.LogError(objSelected.ToString());
+                    //Debug.LogError("PLAYER 1 - HEROES");
+                    _movement.clickObj(objSelected);
+                }
+            }
+        }
+   
+    }
+
+
+
 
 
 }
