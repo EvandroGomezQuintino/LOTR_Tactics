@@ -28,6 +28,11 @@ TagManager:
   - HeroesWon
   - NazgulWon
   - Multiplayer
+  - RingPointer
+  - Background
+  - SoundButton
+  - Vision
+  - Tile_Vision
   layers:
   - Default
   - TransparentFX
