@@ -10,7 +10,7 @@
 
 - [Requirements](https://github.com/Ramisar/LOTR_Tactics/blob/84f6be2d1cf83b7e66a6243a71df096399e2c941/Requirements.pdf)
 - [Game Documentation](https://github.com/Ramisar/LOTR_Tactics/blob/27bcf1f22b911601342a427d3907b182def08fa3/2960774_BSCH%20Project_LOTR%20Tactics.pdf)
-- [Design Document](https://github.com/Ramisar/zombieDice/blob/master/Design%20Document%20-%20Assignment%203.pdf)
+
 
 ### Diagrams:
 >Class Diagram
