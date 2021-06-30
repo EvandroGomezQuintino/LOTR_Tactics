@@ -3,6 +3,7 @@
 # Project Name: LOTR- Tactics
 ### Description:
 >Game based on the Lord of The Rings, combining elements from RPG Tactic games, Chess and Battleship mechanics where players control the Nazgul force with the goal to capture Frodo or The Fellowship, with the objective to bring Frodo to the Mountain Doom.
+>
 >The game was created as part of my 4th year project for college and unfortunately isn't finished yet. Some mechanics like in the multiplayer or the character's skills need to be implemented.
 
 ### Documents:
