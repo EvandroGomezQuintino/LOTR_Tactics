@@ -15,7 +15,9 @@
 ### Diagrams:
 >Class Diagram
 ![class_diagram](https://github.com/Ramisar/LOTR_Tactics/blob/84f6be2d1cf83b7e66a6243a71df096399e2c941/class_diagram.jpg)
+
 >Game Design Diagram
 ![game_design](https://github.com/Ramisar/LOTR_Tactics/blob/84f6be2d1cf83b7e66a6243a71df096399e2c941/game_design_diagram.jpg)
+
 >Sequence Diagram
 ![sequence_diagram](https://github.com/Ramisar/LOTR_Tactics/blob/84f6be2d1cf83b7e66a6243a71df096399e2c941/sequence_diagram.jpg)
